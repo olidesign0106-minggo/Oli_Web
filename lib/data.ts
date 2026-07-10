@@ -9,7 +9,7 @@ export const siteConfig = {
   description:
     "I craft digital products that blend thoughtful design with clean, purposeful code — built to convert and delight.",
   email: "hello@oli.design",
-  url: "https://oli-web.vercel.app",
+  url: "https://oli-web-kohl.vercel.app",
   since: "2020",
   location: "Seoul",
   available: true,
