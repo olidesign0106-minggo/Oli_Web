@@ -3,6 +3,12 @@
 // the entire site without touching components.
 // ─────────────────────────────────────────
 
+export const homeHero = {
+  greeting: "Welcome to",
+  titleLine1: "Minyoung's",
+  titleLine2: "Portfolio Archive",
+};
+
 export const siteConfig = {
   name: "Oli",
   title: "Oli — Creative Designer & Developer",

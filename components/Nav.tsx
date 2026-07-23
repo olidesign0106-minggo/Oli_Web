@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { siteConfig } from "@/lib/data";
+import Image from "next/image";
 
 const links = ["Home", "About", "Works"] as const;
 
@@ -19,7 +19,7 @@ export default function Nav() {
     <header className={`nav${scrolled ? " scrolled" : ""}`}>
       <div className="wrap nav-inner">
         <a href="#home" className="nav-logo">
-          {siteConfig.name}<span>.</span>
+          <Image src="/home/logo.png" alt="Logo" width={64} height={31} priority />
         </a>
 
         <ul className="nav-links">
@@ -29,8 +29,6 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-
-        <a href="#contact" className="nav-cta">Contact</a>
 
         <button
           className={`hamburger${open ? " open" : ""}`}
@@ -46,7 +44,7 @@ export default function Nav() {
 
       <div className={`mobile-menu${open ? " open" : ""}`} aria-hidden={!open}>
         <nav>
-          {[...links, "Contact"].map((l) => (
+          {links.map((l) => (
             <a
               key={l}
               href={`#${l.toLowerCase()}`}

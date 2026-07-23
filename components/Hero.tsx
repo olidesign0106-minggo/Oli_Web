@@ -1,46 +1,28 @@
-import { siteConfig } from "@/lib/data";
+import Image from "next/image";
+import { homeHero } from "@/lib/data";
 
 export default function Hero() {
   return (
     <section id="home" className="hero">
-      <div className="hero-glow" />
-
-      <div className="wrap" style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-        <div className="hero-body">
-          <h1 className="hero-title ha ha1">
-            CREATIVE<br />
-            <span className="dim">DESIGNER</span><br />
-            &amp; DEV
-          </h1>
-
-          <div className="hero-bottom ha ha2">
-            <div className="hero-card">
-              <p className="hero-card-label">Hey!</p>
-              <p>{siteConfig.description}</p>
-            </div>
-
-            {siteConfig.available && (
-              <div className="hero-badge">
-                <div className="hero-badge-dot" />
-                <span>Available for work</span>
-              </div>
-            )}
-          </div>
+      <div className="wrap hero-split">
+        <div className="hero-illustration ha ha1">
+          <Image
+            src="/home/hero-illustration.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="hero-illustration-img"
+            priority
+          />
         </div>
 
-        <div className="hero-scroll ha ha3">
-          <span>Scroll</span>
-          <div className="bounce">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path
-                d="M7 1v12M1 7l6 6 6-6"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+        <div className="hero-copy ha ha2">
+          <p className="hero-greeting">{homeHero.greeting}</p>
+          <h1 className="hero-title">
+            {homeHero.titleLine1}
+            <br />
+            {homeHero.titleLine2}
+          </h1>
         </div>
       </div>
     </section>
