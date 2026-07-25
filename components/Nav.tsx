@@ -17,7 +17,7 @@ export default function Nav() {
 
   return (
     <header className={`nav${scrolled ? " scrolled" : ""}`}>
-      <div className="wrap nav-inner">
+      <div className="nav-inner">
         <a href="#home" className="nav-logo">
           <Image src="/home/logo.png" alt="Logo" width={64} height={31} priority />
         </a>
