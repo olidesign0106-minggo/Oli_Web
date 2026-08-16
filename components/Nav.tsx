@@ -25,7 +25,12 @@ export default function Nav() {
         <ul className="nav-links">
           {links.map((l) => (
             <li key={l}>
-              <a href={`#${l.toLowerCase()}`}>{l}</a>
+              <a
+                href={`#${l.toLowerCase()}`}
+                className={l === "Home" ? "active" : undefined}
+              >
+                {l}
+              </a>
             </li>
           ))}
         </ul>

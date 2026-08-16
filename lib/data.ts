@@ -4,9 +4,11 @@
 // ─────────────────────────────────────────
 
 export const homeHero = {
-  greeting: "Welcome to",
-  titleLine1: "Minyoung's",
-  titleLine2: "Portfolio Archive",
+  headline: ["Good Design", "Should", "Feel Obvious."],
+  description:
+    "I design beyond the interface. By connecting product strategy, business goals, user needs, and technical constraints, I create products that ",
+  descriptionEmphasis:
+    "turn complexity into simple, intuitive experiences.",
 };
 
 export const siteConfig = {

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Poppins, Geist } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/data";
 
@@ -9,6 +9,7 @@ const poppins = Poppins({
   weight: ["500", "600", "700"],
   variable: "--font-poppins",
 });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 
 export const metadata: Metadata = {
   title: {
@@ -52,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="ko" className={`${inter.variable} ${poppins.variable} ${geist.variable}`}>
       <body>{children}</body>
     </html>
   );
