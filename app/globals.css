@@ -344,24 +344,27 @@ body {
 .glimpse-section {
   position: relative;
   background: #f6f4f4;
-  padding-bottom: 80px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .glimpse-header-sticky {
   position: sticky;
   top: 65px;
   z-index: 2;
   background: #f6f4f4;
-  padding: 80px 0 30px;
+  padding: 45px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 12px;
   text-align: center;
 }
 .glimpse-title {
   font-family: var(--font-poppins), ui-sans-serif, sans-serif;
   font-weight: 700;
-  font-size: 60px;
+  font-size: 55px;
+  line-height: 84px;
+  letter-spacing: 0.55px;
   color: #373532;
   margin: 0;
   text-transform: capitalize;
@@ -374,46 +377,47 @@ body {
 }
 .glimpse-item-sticky {
   position: sticky;
-  top: 265px;
+  top: 206px;
   background: #f6f4f4;
-  min-height: 460px;
+  min-height: auto;
 }
 .glimpse-item-sticky.is-first {
-  padding-top: 32px;
+  padding-top: 45px;
 }
 .glimpse-item-outer {
   position: relative;
   min-height: 1450px;
 }
 .glimpse-item-sticky:not(.is-first) > .glimpse-row {
-  margin-top: 30px;
+  margin-top: 45px;
 }
 .glimpse-row {
   width: 100%;
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  padding: 0 20px 30px;
+  padding: 0 20px 45px;
 }
 .glimpse-cta {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 240px;
-  height: 70px;
-  margin: 70px auto 0;
-  background: #000;
-  color: #fff;
+  width: 310px;
+  padding: 24px 16px;
+  margin: 90px auto 0;
+  background: #292929;
+  color: #f5f5f5;
   text-decoration: none;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
-  font-weight: 600;
+  font-weight: 510;
   font-size: 20px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.25s ease, transform 0.25s ease;
 }
 .glimpse-cta:hover {
-  background: #2b2b2b;
+  background: #3d3d3d;
   transform: scale(1.03);
 }
 .glimpse-image {
@@ -436,27 +440,33 @@ body {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 .glimpse-name {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
   font-weight: 700;
-  font-size: 46px;
+  font-size: 36px;
   color: #373532;
   margin: 0;
   text-transform: capitalize;
 }
+.glimpse-subtitle-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 .glimpse-subtitle {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 26px;
+  line-height: 40px;
   color: #373532;
-  margin: 4px 0 0;
+  margin: 0;
 }
 .glimpse-bullets {
   list-style: disc;
   padding-left: 24px;
-  margin: 8px 0 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -464,8 +474,9 @@ body {
 .glimpse-bullets li {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
   font-weight: 500;
-  font-size: 26px;
-  line-height: 1.5;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: -0.052px;
   color: #565453;
 }
 .glimpse-bullets strong {
@@ -479,7 +490,7 @@ body {
   .glimpse-subtitle { font-size: clamp(15px, 2.8vw, 30px); }
   .glimpse-bullets li { font-size: clamp(13px, 2.2vw, 26px); }
   .glimpse-header-sticky { top: 65px; padding: 40px 0 20px; gap: 20px; }
-  .glimpse-item-sticky { top: 165px; min-height: 620px; }
+  .glimpse-item-sticky { top: 165px; min-height: auto; }
   .glimpse-item-sticky.is-first { padding-top: 32px; }
   .glimpse-item-outer { min-height: 1700px; }
   .glimpse-row { flex-direction: column; align-items: flex-start; gap: 16px; }

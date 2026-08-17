@@ -37,17 +37,19 @@ export default function GlimpseOfMe() {
               </div>
               <div className="glimpse-text">
                 <p className="glimpse-name">{item.name}</p>
-                <p className="glimpse-subtitle">{item.subtitle}</p>
-                <ul className="glimpse-bullets">
-                  {item.bullets.map((b, bi) => (
-                    <li key={bi}>
-                      {"label" in b && b.label ? (
-                        <strong>{b.label}</strong>
-                      ) : null}
-                      {"label" in b && b.label ? ` | ${b.text}` : b.text}
-                    </li>
-                  ))}
-                </ul>
+                <div className="glimpse-subtitle-group">
+                  <p className="glimpse-subtitle">{item.subtitle}</p>
+                  <ul className="glimpse-bullets">
+                    {item.bullets.map((b, bi) => (
+                      <li key={bi}>
+                        {"label" in b && b.label ? (
+                          <strong>{b.label}</strong>
+                        ) : null}
+                        {"label" in b && b.label ? ` | ${b.text}` : b.text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           );
@@ -58,10 +60,7 @@ export default function GlimpseOfMe() {
               className={`glimpse-item-sticky${isFirst ? " is-first" : ""}`}
             >
               {isFirst ? (
-                <>
-                  {row}
-                  <div className="glimpse-hr" />
-                </>
+                row
               ) : (
                 <>
                   <div className="glimpse-hr" />
@@ -71,7 +70,7 @@ export default function GlimpseOfMe() {
 
               {isLast && (
                 <Link href="/about" className="glimpse-cta">
-                  View Details
+                  Learn More About Me
                 </Link>
               )}
             </div>
