@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Nav from "@/components/Nav";
-import Hero from "@/components/Hero";
+import IntroHero from "@/components/IntroHero";
 import Marquee from "@/components/Marquee";
 import Services from "@/components/Services";
 import Works from "@/components/Works";
@@ -28,7 +28,7 @@ export default function Page() {
     <>
       <Nav />
       <main>
-        <Hero />
+        <IntroHero />
         <Marquee />
         <Services />
         <Works />
