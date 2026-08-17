@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Nav from "@/components/Nav";
 import IntroHero from "@/components/IntroHero";
+import GlimpseOfMe from "@/components/GlimpseOfMe";
 import Marquee from "@/components/Marquee";
 import Services from "@/components/Services";
 import Works from "@/components/Works";
@@ -29,6 +30,7 @@ export default function Page() {
       <Nav />
       <main>
         <IntroHero />
+        <GlimpseOfMe />
         <Marquee />
         <Services />
         <Works />

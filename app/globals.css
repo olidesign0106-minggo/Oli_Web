@@ -329,6 +329,155 @@ body {
 }
 
 /* ══════════════════════════════════════
+   GLIMPSE OF ME (sticky title + normal scroll)
+══════════════════════════════════════ */
+.glimpse-section {
+  position: relative;
+  background: #f6f4f4;
+  padding-bottom: 80px;
+}
+.glimpse-header-sticky {
+  position: sticky;
+  top: 65px;
+  z-index: 2;
+  background: #f6f4f4;
+  padding: 80px 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+.glimpse-title {
+  font-family: var(--font-poppins), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  color: #373532;
+  margin: 0;
+  text-transform: capitalize;
+}
+.glimpse-hr {
+  width: 100%;
+  height: 2px;
+  background: #a1a1a1;
+  flex-shrink: 0;
+}
+.glimpse-item-sticky {
+  position: sticky;
+  top: 265px;
+  background: #f6f4f4;
+  min-height: 460px;
+}
+.glimpse-item-sticky.is-first {
+  padding-top: 32px;
+}
+.glimpse-item-outer {
+  position: relative;
+  min-height: 1450px;
+}
+.glimpse-item-sticky:not(.is-first) > .glimpse-row {
+  margin-top: 30px;
+}
+.glimpse-row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 0 20px 30px;
+}
+.glimpse-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 70px;
+  margin: 70px auto 0;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.glimpse-cta:hover {
+  background: #2b2b2b;
+  transform: scale(1.03);
+}
+.glimpse-image {
+  position: relative;
+  width: 310px;
+  height: 310px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.glimpse-image-img {
+  object-fit: cover;
+}
+.glimpse-image-placeholder {
+  position: absolute;
+  inset: 0;
+}
+.glimpse-text {
+  flex: 1;
+  max-width: 700px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.glimpse-name {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+  color: #373532;
+  margin: 0;
+  text-transform: capitalize;
+}
+.glimpse-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #373532;
+  margin: 4px 0 0;
+}
+.glimpse-bullets {
+  list-style: disc;
+  padding-left: 24px;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.glimpse-bullets li {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.5;
+  color: #565453;
+}
+.glimpse-bullets strong {
+  font-weight: 700;
+  color: #565453;
+}
+
+@media (max-width: 1000px) {
+  .glimpse-title { font-size: clamp(28px, 6vw, 60px); }
+  .glimpse-name { font-size: clamp(22px, 4.5vw, 46px); }
+  .glimpse-subtitle { font-size: clamp(15px, 2.8vw, 30px); }
+  .glimpse-bullets li { font-size: clamp(13px, 2.2vw, 26px); }
+  .glimpse-header-sticky { top: 65px; padding: 40px 0 20px; gap: 20px; }
+  .glimpse-item-sticky { top: 165px; min-height: 620px; }
+  .glimpse-item-sticky.is-first { padding-top: 32px; }
+  .glimpse-item-outer { min-height: 1700px; }
+  .glimpse-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .glimpse-image { width: 100%; max-width: 280px; height: 280px; }
+  .glimpse-cta { margin: 40px auto 0; }
+}
+
+/* ══════════════════════════════════════
    MARQUEE
 ══════════════════════════════════════ */
 .marquee-wrap {
