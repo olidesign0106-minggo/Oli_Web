@@ -2,12 +2,19 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const links = ["Home", "About", "Works"] as const;
+const links = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Works", href: "/works" },
+] as const;
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 30);
@@ -18,19 +25,19 @@ export default function Nav() {
   return (
     <header className={`nav${scrolled ? " scrolled" : ""}`}>
       <div className="nav-inner">
-        <a href="#home" className="nav-logo">
+        <Link href="/" className="nav-logo">
           <Image src="/home/logo.png" alt="Logo" width={64} height={31} priority />
-        </a>
+        </Link>
 
         <ul className="nav-links">
           {links.map((l) => (
-            <li key={l}>
-              <a
-                href={`#${l.toLowerCase()}`}
-                className={l === "Home" ? "active" : undefined}
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                className={pathname === l.href ? "active" : undefined}
               >
-                {l}
-              </a>
+                {l.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -50,13 +57,13 @@ export default function Nav() {
       <div className={`mobile-menu${open ? " open" : ""}`} aria-hidden={!open}>
         <nav>
           {links.map((l) => (
-            <a
-              key={l}
-              href={`#${l.toLowerCase()}`}
+            <Link
+              key={l.href}
+              href={l.href}
               onClick={() => setOpen(false)}
             >
-              {l}
-            </a>
+              {l.label}
+            </Link>
           ))}
         </nav>
       </div>
